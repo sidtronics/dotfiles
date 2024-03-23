@@ -1,0 +1,9 @@
+# Start xbindkeys
+xbindkeys
+
+# Disable ghost inputs
+xinput disable "SYNA3082:00 06CB:8265 Mouse"
+
+# System tray icons
+#snixembed --fork
+#iwgtk

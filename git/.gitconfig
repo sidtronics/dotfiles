@@ -1,0 +1,22 @@
+[user]
+	name = Siddhesh Dharme
+	email = siddheshdharme18@gmail.com
+[sendemail]
+	smtpServer =smtp.gmail.com
+	smtpServerPort = 587
+	smtpEncryption = tls
+	smtpUser = siddheshdharme18@gmail.com
+[credential]
+	helper = store
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = nvim
+[pack]
+	window = 1
+[init]
+	defaultBranch = main
