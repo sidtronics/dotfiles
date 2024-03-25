@@ -27,7 +27,10 @@ function exit_status_prompt() {
 precmd_functions+=(git_branch_prompt)
 precmd_functions+=(exit_status_prompt)
 
-PROMPT=$'\n┏━━%B[%F{#FFFF00}%n@%M%f 󰁕 %F{#00AFFF}%~%f]%b\n┗━%B%F{#FFFF00}%(#.#.$)%f%b '
+case $(tty) in 
+  (/dev/tty[1-9]) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f -> %F{#00AFFF}%~%f]\n└─%F{#FFFF00}%(#.#.$)%f%b ';; 
+              (*) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f 󰁕 %F{#00AFFF}%~%f]\n└─%F{#FFFF00}%(#.#.$)%f%b ';; 
+esac
 
 # word config
 
