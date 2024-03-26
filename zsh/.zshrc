@@ -66,6 +66,7 @@ alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 #alias fzf='fzf --color=auto'
 alias gdb='gdb -q'
+alias firefox='eatmydata firefox'
 
 # syntax highlighting
 
