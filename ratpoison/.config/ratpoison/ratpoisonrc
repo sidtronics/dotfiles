@@ -1,0 +1,63 @@
+# on start:
+
+exec rpws init 5 -k
+exec feh --bg-scale ~/Downloads/wallpapers/green-watchtower.jpg
+banish
+
+# options:
+
+set bargravity c
+set font "FiraCodeNerdFontPropo:style=Bold:size=11"
+set barborder 3
+set border 3
+set barpadding 5 5
+set bwcolor #808080
+set fwcolor #17FC17
+set bgcolor #000000
+set fgcolor #17FC17
+set startupmessage 0
+
+# keybinds:
+
+escape Super_L
+
+bind t exec alacritty
+bind b exec eatmydata firefox
+bind e exec
+
+definekey top Print exec scrot ~/Drive/screenshots/%Y-%m-%d-%H.%M.%S-screenshot.png && notify-send -u low -t 3000 Screenshot "saved at ~/Drive/screenshots/."
+
+definekey top XF86AudioRaiseVolume exec ~/.config/ratpoison/scripts/audio.sh inc
+definekey top XF86AudioLowerVolume exec ~/.config/ratpoison/scripts/audio.sh dec
+definekey top XF86AudioMute exec ~/.config/ratpoison/scripts/audio.sh mute
+definekey top XF86AudioMicMute exec ~/.config/ratpoison/scripts/audio.sh mmute
+
+definekey top XF86MonBrightnessUp exec ~/.config/ratpoison/scripts/brightness.sh inc
+definekey top XF86MonBrightnessDown exec ~/.config/ratpoison/scripts/brightness.sh dec
+
+bind R exec ~/.config/ratpoison/scripts/reload.sh
+bind Q quit
+bind q only
+bind a abort
+bind v vsplit
+bind h hsplit
+bind B banish
+bind x delete
+bind X remove
+bind s swap
+bind r resize
+bind u undo
+bind U redo
+
+bind 1 rpws1
+bind 2 rpws2
+bind 3 rpws3
+bind 4 rpws4
+bind 5 rpws5
+bind exclam rpwsm1
+bind at rpwsm2
+bind numbersign rpwsm3
+bind dollar rpwsm4
+bind percent rpwsm5
+bind S-Right rpwsmn
+bind S-Left rpwsmp
