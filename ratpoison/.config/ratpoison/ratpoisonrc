@@ -16,6 +16,7 @@ set fwcolor #17FC17
 set bgcolor #000000
 set fgcolor #17FC17
 set startupmessage 0
+set waitcursor 0
 
 # keybinds:
 
