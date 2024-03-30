@@ -3,6 +3,12 @@
 
 battery() {
 
+if [ -z $(ls /sys/class/power_supply/) ]; then
+    ibat="󰚥"
+    echo "$ibat AC"
+    return
+fi
+
 batstat="$(cat /sys/class/power_supply/BAT0/status)"
 batcap="$(cat /sys/class/power_supply/BAT0/capacity)"
 
