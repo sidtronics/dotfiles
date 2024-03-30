@@ -1,7 +1,9 @@
 # on start:
 
 exec rpws init 5 -k
+exec picom -b
 exec feh --bg-scale ~/Downloads/wallpapers/green-watchtower.jpg
+exec ~/.config/ratpoison/scripts/dzen.sh
 banish
 
 # options:
@@ -11,6 +13,7 @@ set font "FiraCodeNerdFontPropo:style=Bold:size=11"
 set barborder 3
 set border 3
 set barpadding 5 5
+set padding 0 22 0 0
 set bwcolor #808080
 set fwcolor #17FC17
 set bgcolor #000000
@@ -36,7 +39,8 @@ definekey top XF86AudioMicMute exec ~/.config/ratpoison/scripts/audio.sh mmute
 definekey top XF86MonBrightnessUp exec ~/.config/ratpoison/scripts/brightness.sh inc
 definekey top XF86MonBrightnessDown exec ~/.config/ratpoison/scripts/brightness.sh dec
 
-bind R exec ~/.config/ratpoison/scripts/reload.sh
+bind R  exec ~/.config/ratpoison/scripts/reload.sh
+#bind R restart
 bind Q quit
 bind q only
 bind a abort
@@ -62,3 +66,5 @@ bind dollar rpwsm4
 bind percent rpwsm5
 bind S-Right rpwsmn
 bind S-Left rpwsmp
+
+bind m exec ~/.config/ratpoison/scripts/togglefs.sh
