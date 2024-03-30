@@ -26,3 +26,8 @@ background = "0x000000"
 
 [colors.cursor]
 cursor = "0x17FC17"
+
+# Window config
+
+[window]
+opacity = 0.9
