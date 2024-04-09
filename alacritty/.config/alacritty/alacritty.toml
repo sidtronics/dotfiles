@@ -18,3 +18,16 @@ style = "Italic"
 [font.normal]
 family = "FiraCode Nerd Font Mono"
 style = "SemiBold"
+
+# Color config
+
+[colors.primary]
+background = "0x000000"
+
+#[colors.cursor]
+#cursor = "0xffffff"
+
+# Window config
+
+[window]
+opacity = 0.9
