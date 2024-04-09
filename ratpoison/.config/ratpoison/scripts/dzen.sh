@@ -76,7 +76,7 @@ cpu() {
     cpu_active_prev=$((user+system+nice+softirq+steal))
     cpu_total_prev=$((user+system+nice+softirq+steal+idle+iowait))
 
-    sleep 0.05
+    sleep 1
 
     # Read /proc/stat file (for second datapoint)
     read cpu user nice system idle iowait irq softirq steal guest< /proc/stat
@@ -94,12 +94,12 @@ cpu() {
 }
 
 output() {
-
+    
+    # Note: 1 second sleep present in cpu() function.
     while :; do
         echo "$(battery) | $(volume) | $(brightness) |  $(date "+%a %d-%m-%Y %R:%S %Z") | $(cpu) |  $(uptime -p | cut -d " " -f2-) |  $USER" 
-        sleep 1
     done
 }
 
 
-output | dzen2 -p -fg "#17FC17" -bg "#000000" -fn FiraCodeNerdFontMono:style=SemiBold -h 20
+output | dzen2 -fg "#17FC17" -bg "#000000" -fn FiraCodeNerdFontMono:style=SemiBold -h 20
