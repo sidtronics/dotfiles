@@ -43,7 +43,7 @@ bind R  exec ~/.config/ratpoison/scripts/reload.sh
 #bind R restart
 bind Q quit
 bind q only
-bind a abort
+bind Escape abort
 bind v vsplit
 bind h hsplit
 bind B banish
