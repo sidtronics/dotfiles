@@ -1,6 +1,8 @@
 # options
 
 setopt extended_glob # enable extended globbing
+setopt promptsubst # enable command, parameter substitution in prompt.
+VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # prompt configuration
 
@@ -24,12 +26,16 @@ function exit_status_prompt() {
 
 }
 
+function virtualenv_info { 
+    [ $VIRTUAL_ENV ] && echo '( '`basename $VIRTUAL_ENV`')'
+}
+
 precmd_functions+=(git_branch_prompt)
 precmd_functions+=(exit_status_prompt)
 
 case $(tty) in 
-  (/dev/tty[1-9]) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f -> %F{#00AFFF}%~%f]\n└─%F{#FFFF00}%(#.#.$)%f%b ';; 
-              (*) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f 󰁕 %F{#00AFFF}%~%f]\n└─%F{#FFFF00}%(#.#.$)%f%b ';; 
+    (/dev/tty[1-9]) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f -> %F{#00AFFF}%~%f]%F{#00FF00} $(virtualenv_info)%f\n└─%F{#FFFF00}$%f%b ';; 
+              (*) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f 󰁕 %F{#00AFFF}%~%f]%F{#90EE90} $(virtualenv_info)%f\n└─%F{#FFFF00}$%f%b ';; 
 esac
 
 # word config
