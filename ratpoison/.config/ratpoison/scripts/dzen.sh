@@ -3,7 +3,7 @@
 
 battery() {
 
-if [ -z $(ls /sys/class/power_supply/) ]; then
+if [ -z "$(ls /sys/class/power_supply/)" ]; then
     ibat="󰚥"
     echo "$ibat AC"
     return
@@ -66,6 +66,7 @@ brightness() {
     echo "$ibri $bval%"
 }
 
+
 cpu() {
     
     # script taken from https://stackoverflow.com/questions/26791240/how-to-get-percentage-of-processor-use-with-bash
@@ -97,7 +98,7 @@ output() {
     
     # Note: 1 second sleep present in cpu() function.
     while :; do
-        echo "$(battery) | $(volume) | $(brightness) |  $(date "+%a %d-%m-%Y %R:%S %Z") | $(cpu) |  $(uptime -p | cut -d " " -f2-) |  $USER" 
+        echo "  $(rpws current) | $(battery) | $(volume) | $(brightness) |  $(date "+%a %d-%m-%Y %R:%S %Z") | $(cpu) |  $(uptime -p | cut -d " " -f2-) |  $USER" 
     done
 }
 
