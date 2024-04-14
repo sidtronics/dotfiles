@@ -25,9 +25,22 @@ set waitcursor 0
 
 escape Super_L
 
+## miscellaneous binds:
+
+bind R  exec ~/.config/ratpoison/scripts/reload.sh
+bind Q quit
+bind Escape abort
+bind B banish
+bind u undo
+bind U redo
+
+## program launcher binds:
+
 bind t exec alacritty
 bind b exec eatmydata firefox
 bind e exec
+
+## top level binds:
 
 definekey top Print exec exec ~/.config/ratpoison/scripts/screenshot.sh ~/Drive/screenshots/
 
@@ -39,20 +52,21 @@ definekey top XF86AudioMicMute exec ~/.config/ratpoison/scripts/audio.sh mmute
 definekey top XF86MonBrightnessUp exec ~/.config/ratpoison/scripts/brightness.sh inc
 definekey top XF86MonBrightnessDown exec ~/.config/ratpoison/scripts/brightness.sh dec
 
-bind R  exec ~/.config/ratpoison/scripts/reload.sh
-#bind R restart
-bind Q quit
+## frame related binds:
+
+bind c curframe
 bind q only
-bind Escape abort
 bind v vsplit
 bind h hsplit
-bind B banish
+bind minus select -
 bind x delete
 bind X remove
 bind s swap
 bind r resize
-bind u undo
-bind U redo
+bind m exec ~/.config/ratpoison/scripts/togglefs.sh
+
+
+## workspace related binds...
 
 bind 1 rpws1
 bind 2 rpws2
@@ -66,5 +80,3 @@ bind dollar rpwsm4
 bind percent rpwsm5
 bind S-Right rpwsmn
 bind S-Left rpwsmp
-
-bind m exec ~/.config/ratpoison/scripts/togglefs.sh
