@@ -4,6 +4,9 @@ xbindkeys
 # Disable ghost inputs
 xinput disable "SYNA3082:00 06CB:8265 Mouse"
 
+# Start picom
+picom -b
+
 # System tray icons
 #snixembed --fork
 #iwgtk
