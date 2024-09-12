@@ -1,3 +1,9 @@
+# Start light-locker 
+light-locker &
+
+# Start udiskie
+# udiskie --tray &
+
 # Start xbindkeys
 xbindkeys
 
