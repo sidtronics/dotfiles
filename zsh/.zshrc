@@ -6,37 +6,41 @@ VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # prompt configuration
 
-function git_branch_prompt() {
+function git_branch_rprompt() {
 	
 	RPROMPT=""
 	local gbranch=$(git branch --show-current 2>/dev/null)
 
 	if [ ! -z "$gbranch" ]; then
 		local gmark=""
-		if [ ! -z "$(git status --short)" ]; then
+	if [ ! -z "$(git status --short)" ]; then
 			gmark="!"
 		fi 
 		RPROMPT="%B%F{red}$gmark%f%F{green} $gbranch%f%b"
 	fi
 }
 
-function exit_status_prompt() {
+function exit_status_rprompt() {
 
 	RPROMPT+=$' %(?.. %? %F{red}%B%b%F{reset})%(1j. %j %F{yellow}%B%b%F{reset}.)'
 
 }
 
-function virtualenv_info { 
-    [ $VIRTUAL_ENV ] && echo '( '`basename $VIRTUAL_ENV`')'
+function set_indicators_prompt() {
+    
+    INDICATORS=''
 }
 
-precmd_functions+=(git_branch_prompt)
-precmd_functions+=(exit_status_prompt)
+precmd_functions+=(git_branch_rprompt)
+precmd_functions+=(exit_status_rprompt)
+precmd_functions+=(set_indicators_prompt)
 
 case $(tty) in 
-    (/dev/tty[1-9]) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f -> %F{#00AFFF}%~%f]%F{#00FF00} $(virtualenv_info)%f\n└─%F{#FFFF00}$%f%b ';; 
-              (*) PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f 󰁕 %F{#00AFFF}%~%f]%F{#90EE90} $(virtualenv_info)%f\n└─%F{#FFFF00}$%f%b ';; 
+  (/dev/tty[1-9]) PROMPT_ARROW='->';; 
+              (*) PROMPT_ARROW='󰁕';; 
 esac
+
+PROMPT=$'\n%B┌──[%F{#FFFF00}%n@%M%f $PROMPT_ARROW %F{#00AFFF}%~%f]$INDICATORS\n└─%F{#FFFF00}%(#.#.$)%f%b '
 
 # word config
 
