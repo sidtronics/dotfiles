@@ -8,7 +8,8 @@ local servers = {
 	"clangd",
 	"bashls",
 	"pylsp",
-    "arduino_language_server"
+    "arduino_language_server",
+    "jsonls"
 }
 
 local opts = {
