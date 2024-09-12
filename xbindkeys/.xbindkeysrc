@@ -15,8 +15,8 @@
 
 #Backlight:
 
-"brightnessctl -q -d intel_backlight s +2%"
+"light -A 2"
   XF86MonBrightnessUp
 
-"brightnessctl -q -d intel_backlight s 2%-"
+"light -U 2"
   XF86MonBrightnessDown
