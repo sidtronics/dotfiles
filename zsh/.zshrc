@@ -54,6 +54,17 @@ setopt hist_verify            # show command with history expansion to user
 
 alias history="history 0"
 
+# auto completion
+
+fpath=($HOME/.zsh/completions $fpath)    # additional local completions
+
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+zstyle ':completion::complete:*' gain-privileges 1
+
+
 # key bindings
 
 bindkey '^[[3~' delete-char                       # delete
@@ -72,6 +83,7 @@ alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 #alias fzf='fzf --color=auto'
 alias gdb='gdb -q'
+alias sbcl='rlwrap sbcl'
 
 # syntax highlighting
 
