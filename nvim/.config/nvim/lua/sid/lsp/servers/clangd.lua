@@ -2,6 +2,7 @@ return {
 
     cmd = {
 
-        "clangd", "--header-insertion=never"
-    }
+        "clangd",
+        "--header-insertion=never",
+    },
 }
