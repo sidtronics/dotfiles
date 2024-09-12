@@ -9,6 +9,7 @@ local servers = {
 	"bashls",
 	"pylsp",
     "arduino_language_server",
+    "jdtls",
     "jsonls"
 }
 
