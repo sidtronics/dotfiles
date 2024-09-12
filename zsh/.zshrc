@@ -1,6 +1,7 @@
 # options
 
 setopt extended_glob # enable extended globbing
+setopt promptsubst   # enable prompt substitution
 
 # prompt configuration
 
@@ -21,16 +22,23 @@ function git_branch_prompt() {
 function exit_status_prompt() {
 
 	RPROMPT+=$' %(?.. %? %F{red}%B%b%F{reset})%(1j. %j %F{yellow}%B%b%F{reset}.)'
-
 }
 
 precmd_functions+=(git_branch_prompt)
 precmd_functions+=(exit_status_prompt)
 
 case $(tty) in 
-  (/dev/tty[1-9]) PROMPT=$'\n%B┌──[%F{#17FC17}%n@%M%f -> %F{#00AFFF}%~%f]\n└─%F{#17FC17}%(#.#.$)%f%b ';; 
-              (*) PROMPT=$'\n%B┌──[%F{#17FC17}%n@%M%f 󰁕 %F{#00AFFF}%~%f]\n└─%F{#17FC17}%(#.#.$)%f%b ';; 
+  (/dev/tty[1-9]) arrow='->';; 
+              (*) arrow='󰁕';; 
 esac
+
+PROMPT_L1=$'\n%B┌──[%F{#17FC17}%n@%M%f $arrow %F{#00AFFF}%~%f]'
+
+if [ $IS_CHROOT -eq 1 ]; then
+    PROMPT_L1+=' (%F{#17FC17}󱇰 ARC%f)'
+fi
+
+PROMPT=$PROMPT_L1$'\n└─%F{#17FC17}%(#.#.$)%f%b '
 
 # word config
 
