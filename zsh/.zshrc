@@ -5,7 +5,7 @@ setopt promptsubst   # enable prompt substitution
 
 # prompt configuration
 
-function git_branch_prompt() {
+function git_branch_rprompt() {
 	
 	RPROMPT=""
 	local gbranch=$(git branch --show-current 2>/dev/null)
@@ -19,26 +19,27 @@ function git_branch_prompt() {
 	fi
 }
 
-function exit_status_prompt() {
+function exit_status_rprompt() {
 
 	RPROMPT+=$' %(?.. %? %F{red}%B%b%F{reset})%(1j. %j %F{yellow}%B%b%F{reset}.)'
 }
 
-precmd_functions+=(git_branch_prompt)
-precmd_functions+=(exit_status_prompt)
+function set_indicators_prompt() {
+    
+    INDICATORS=''
+    [ $IS_CHROOT ] && INDICATORS+=' (%F{#17FC17}󱇰 ARC%f)' # ARC chroot indicator
+}
+
+precmd_functions+=(git_branch_rprompt)
+precmd_functions+=(exit_status_rprompt)
+precmd_functions+=(set_indicators_prompt)
 
 case $(tty) in 
-  (/dev/tty[1-9]) arrow='->';; 
-              (*) arrow='󰁕';; 
+  (/dev/tty[1-9]) PROMPT_ARROW='->';; 
+              (*) PROMPT_ARROW='󰁕';; 
 esac
 
-PROMPT_L1=$'\n%B┌──[%F{#17FC17}%n@%M%f $arrow %F{#00AFFF}%~%f]'
-
-if [ $IS_CHROOT -eq 1 ]; then
-    PROMPT_L1+=' (%F{#17FC17}󱇰 ARC%f)'
-fi
-
-PROMPT=$PROMPT_L1$'\n└─%F{#17FC17}%(#.#.$)%f%b '
+PROMPT=$'\n%B┌──[%F{#17FC17}%n@%M%f $PROMPT_ARROW %F{#00AFFF}%~%f]$INDICATORS\n└─%F{#17FC17}%(#.#.$)%f%b '
 
 # word config
 
