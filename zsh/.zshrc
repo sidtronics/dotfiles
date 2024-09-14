@@ -29,6 +29,7 @@ function exit_status_rprompt() {
 function set_indicators_prompt() {
     
     INDICATORS=''
+    [ $VIRTUAL_ENV ] && INDICATORS+=' (%F{#90EE90} '$(basename $VIRTUAL_ENV)'%f)' # python virtual environment indicator.
 }
 
 precmd_functions+=(git_branch_rprompt)
