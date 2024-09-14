@@ -2,6 +2,7 @@
 
 setopt extended_glob # enable extended globbing
 setopt promptsubst   # enable prompt substitution
+VIRTUAL_ENV_DISABLE_PROMPT=1 # disable default virtual env prompt
 
 # prompt configuration
 
@@ -28,6 +29,7 @@ function set_indicators_prompt() {
     
     INDICATORS=''
     [ $IS_CHROOT ] && INDICATORS+=' (%F{#17FC17}󱇰 ARC%f)' # ARC chroot indicator
+    [ $VIRTUAL_ENV ] && INDICATORS+=' (%F{#90EE90} '$(basename $VIRTUAL_ENV)'%f)' # python virtual environment indicator
 }
 
 precmd_functions+=(git_branch_rprompt)
