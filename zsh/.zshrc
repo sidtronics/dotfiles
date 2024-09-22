@@ -1,3 +1,7 @@
+# exports
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # options
 
 setopt extended_glob # enable extended globbing
