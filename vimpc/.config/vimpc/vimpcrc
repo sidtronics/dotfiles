@@ -1,0 +1,9 @@
+set window playlist
+set windows playlist,directory,browse,help
+set ignorecase
+set singlequit
+set incsearch
+
+hi tab yellow black 
+hi current black yellow
+hi status yellow black
