@@ -90,10 +90,12 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
+alias pacdiff='DIFFPROG="nvim -d" pacdiff'
 #alias fzf='fzf --color=auto'
 alias gdb='gdb -q'
-alias sbcl='rlwrap sbcl'
+alias sbcl='rlwrap -c sbcl'
 alias wa='firefox web.whatsapp.com'
+
 
 # syntax highlighting
 
