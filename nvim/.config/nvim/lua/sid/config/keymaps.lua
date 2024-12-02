@@ -33,7 +33,7 @@ map("v", ">", ">gv")
 map("n", "<leader>cf", vim.lsp.buf.format, {})
 
 -- lazy
-map("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>z", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- mason
-map("n", "<leader>lm", "<cmd>Mason<cr>", { desc = "Mason" })
+map("n", "<leader>m", "<cmd>Mason<cr>", { desc = "Mason" })
