@@ -1,20 +1,18 @@
 return {
 
     {
-
         "folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {
+        lazy = false,
+        priority = 1000,
 
+        opts = {
             style = "night",
-            transparent = true
-		}
-	},
+            transparent = true,
+        },
 
-	{
-		"nyoom-engineering/oxocarbon.nvim",
-		lazy = true,
-		priority = 1000,
-	}
+        config = function(_, opts)
+            require("tokyonight").setup(opts)
+            vim.cmd("colorscheme tokyonight")
+        end,
+    }
 }
