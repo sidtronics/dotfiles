@@ -3,7 +3,7 @@ return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
 	lazy = true,
-	keys = [[<C-\>]],
+	keys = { [[<C-\>]], "<C-g>" },
 
 	opts = {
 
@@ -17,4 +17,13 @@ return {
 			border = "rounded",
 		},
 	},
+
+    config = function (_,opts)
+
+        require("toggleterm").setup(opts)
+        local Terminal = require("toggleterm.terminal").Terminal
+        local lg = Terminal:new({cmd = "lazygit", hidden = true})
+        function _Lazygit_toggle() lg:toggle() end
+        vim.keymap.set({"n", "t"}, "<C-g>", _Lazygit_toggle, {noremap = true, silent = true})
+    end
 }

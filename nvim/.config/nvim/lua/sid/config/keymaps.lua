@@ -32,7 +32,7 @@ map("v", ">", ">gv")
 -- terminal
 ---@diagnostic disable-next-line: duplicate-set-field
 function _G.set_terminal_keymaps()
-    map('t', '<esc>', [[<C-\><C-n>]], {buffer = 0})
+    map('t', '<C-n>', [[<C-\><C-n>]], {noremap = true, buffer = 0})
     map('t', '<C-h>', [[<Cmd>wincmd h<CR>]], {buffer = 0})
     map('t', '<C-j>', [[<Cmd>wincmd j<CR>]], {buffer = 0})
     map('t', '<C-k>', [[<Cmd>wincmd k<CR>]], {buffer = 0})
