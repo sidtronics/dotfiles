@@ -13,7 +13,6 @@ return {
         start_in_insert = true,
         persist_mode = false,
 		float_opts = {
-
 			border = "rounded",
 		},
 	},
@@ -22,7 +21,7 @@ return {
 
         require("toggleterm").setup(opts)
         local Terminal = require("toggleterm.terminal").Terminal
-        local lg = Terminal:new({cmd = "lazygit", hidden = true})
+        local lg = Terminal:new({cmd = "lazygit", hidden = true, float_opts = {width = 120, height = 30}})
         function _Lazygit_toggle() lg:toggle() end
         vim.keymap.set({"n", "t"}, "<C-g>", _Lazygit_toggle, {noremap = true, silent = true})
     end
