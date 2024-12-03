@@ -2,8 +2,9 @@ return {
 
     "akinsho/toggleterm.nvim",
     version = "*",
-    lazy = true,
-    keys = { [[<C-\>]], "<C-g>", "<leader>vp" },
+    lazy = false,
+    priority = 2000,
+    keys = { [[<C-\>]], "<C-g>", "<leader>vc" },
 
     opts = {
 
@@ -12,6 +13,17 @@ return {
         auto_scroll = true,
         start_in_insert = true,
         persist_mode = false,
+        shade_terminals = false,
+        highlights = {
+            NormalFloat = {
+                guibg = "#16161e"
+            },
+            FloatBorder = {
+                guifg = "#27a1b9",
+                guibg = "#16161e"
+            }
+        },
+
         float_opts = {
             border = "rounded",
         },
@@ -27,8 +39,8 @@ return {
         function _Lazygit_toggle() lazygit:toggle() end
         vim.keymap.set({ "n", "t" }, "<C-g>", _Lazygit_toggle, { noremap = true, silent = true })
 
-        local vimpc = Terminal:new({ cmd = "vimpc", hidden = false, count = 1 })
+        local vimpc = Terminal:new({ cmd = "vimpc", hidden = false})
         function _Vimpc_toggle() vimpc:toggle() end
-        vim.keymap.set("n", "<leader>vp", _Vimpc_toggle, { noremap = true, silent = true })
+        vim.keymap.set("n", "<leader>vc", _Vimpc_toggle, { noremap = true, silent = true })
     end
 }
