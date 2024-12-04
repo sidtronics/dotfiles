@@ -11,7 +11,9 @@ return {
 			sources = {
 
 				null_ls.builtins.formatting.black,
-				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.stylua.with({
+                    extra_args = {"--config-path", "$XDG_CONFIG_HOME/stylua.toml"}
+                }),
 			},
 		})
 	end,
