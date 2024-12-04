@@ -4,7 +4,7 @@ return {
     version = "*",
     lazy = false,
     priority = 2000,
-    keys = { [[<C-\>]], "<C-g>", "<leader>vc" },
+    keys = { [[<C-\>]], "<C-g>", "<leader>vm" },
 
     opts = {
 
@@ -41,6 +41,6 @@ return {
 
         local vimpc = Terminal:new({ cmd = "vimpc", hidden = false})
         function _Vimpc_toggle() vimpc:toggle() end
-        vim.keymap.set("n", "<leader>vc", _Vimpc_toggle, { noremap = true, silent = true })
+        vim.keymap.set("n", "<leader>vm", _Vimpc_toggle, { noremap = true, silent = true })
     end
 }
