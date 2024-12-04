@@ -2,8 +2,7 @@ return {
 
     "akinsho/toggleterm.nvim",
     version = "*",
-    lazy = false,
-    priority = 2000,
+    lazy = true,
     keys = { [[<C-\>]], "<C-g>", "<leader>vm" },
 
     opts = {
