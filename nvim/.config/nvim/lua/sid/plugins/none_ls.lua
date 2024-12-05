@@ -16,5 +16,7 @@ return {
                 }),
 			},
 		})
+
+        vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format" })
 	end,
 }

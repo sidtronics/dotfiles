@@ -42,9 +42,6 @@ end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
--- formatting
-map("n", "<leader>cf", vim.lsp.buf.format, {})
-
 -- lazy
 map("n", "<leader>z", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
