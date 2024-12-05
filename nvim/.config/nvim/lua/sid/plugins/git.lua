@@ -4,7 +4,7 @@ return {
         "echasnovski/mini.diff",
         lazy = true,
         keys = {
-            { "td", "<cmd>lua MiniDiff.toggle_overlay()<cr>", { desc = "Toggle mini.diff", noremap = true } }
+            { "<leader>gd", "<cmd>lua MiniDiff.toggle_overlay()<cr>", desc = "Toggle Diff", noremap = true }
         },
 
         opts = {
@@ -43,7 +43,7 @@ return {
         "FabijanZulj/blame.nvim",
         lazy = true,
         keys = {
-            { "tb", "<cmd>BlameToggle<cr>", { Desc = "Toggle Blame", noremap = true } }
+            { "<leader>gb", "<cmd>BlameToggle<cr>", desc = "Toggle Blame", noremap = true }
         },
         config = true
     }
