@@ -24,11 +24,16 @@ return {
             goto_next = ']h',
             goto_last = ']H',
         },
+
+        options = {
+
+            wrap_goto = true
+        }
     },
 
     config = function(_, opts)
-        local MiniDiff = require("mini.diff")
-        MiniDiff.setup(opts)
-        MiniDiff.enable()
+        local minidiff = require("mini.diff")
+        minidiff.setup(opts)
+        minidiff.enable()
     end
 }
