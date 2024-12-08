@@ -94,12 +94,12 @@ return {
                 },
             },
 
-            {
-                hide = {
 
-                    statusline = false
-                }
+            hide = {
+
+                statusline = false
             }
+
         }
     }
 }
