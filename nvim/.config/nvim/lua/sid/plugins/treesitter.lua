@@ -1,10 +1,11 @@
 return {
 
-   "nvim-treesitter/nvim-treesitter",
-   main = "nvim-treesitter.configs",
-   lazy = false,
-   build = ":TSUpdate",
-   opts = {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = vim.fn.argc(-1) == 0,
+    event = { "VeryLazy" },
+    build = ":TSUpdate",
+    main = "nvim-treesitter.configs",
+    opts = {
 
         ensure_installed = {
 
@@ -19,5 +20,5 @@ return {
 
             enable = "true"
         }
-   }
+    }
 }
