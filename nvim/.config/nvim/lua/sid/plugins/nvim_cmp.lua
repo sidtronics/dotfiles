@@ -41,6 +41,7 @@ return {
             sources = cmp.config.sources({
 
                 { name = "nvim_lsp" },
+                { name = "nvlime" },
                 { name = "nvim_lua" },
             },
 
@@ -94,6 +95,7 @@ return {
                         nvim_lsp = "[LSP]",
                         luasnip = "[LuaSnip]",
                         nvim_lua = "[Lua]",
+                        nvlime = "[Nvlime]"
 
                     })[entry.source.name]
 

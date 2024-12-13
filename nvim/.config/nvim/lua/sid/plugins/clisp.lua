@@ -2,6 +2,7 @@ return {
 
     "monkoose/nvlime",
     ft = "lisp",
+
     dependencies = {
 
         {
@@ -14,4 +15,10 @@ return {
             lazy = true,
         }
     },
+
+    init = function()
+        vim.g.nvlime_config = {
+            cmp = { enabled = true },
+        }
+    end,
 }
