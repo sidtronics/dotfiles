@@ -1,3 +1,6 @@
+# Exports
+export SBCL_HOME=/usr/lib/sbcl/
+
 # Start light-locker 
 light-locker &
 
