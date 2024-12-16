@@ -8,7 +8,7 @@ return {
             function()
                 require("which-key").show({ global = false })
             end,
-            desc = "Buffer",
+            desc = "Current buffer",
         },
     },
 
@@ -16,6 +16,7 @@ return {
 
         spec = {
             { [[<C-\>]],   desc = "Toggle terminal" },
+            { "<leader>b", group = "Buffer"},
             { "<leader>t", group = "Telescope" },
             { "<leader>l", group = "LSP", icon = "" },
             { "<leader>g", group = "Git" },
