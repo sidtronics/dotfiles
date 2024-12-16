@@ -1,0 +1,10 @@
+(in-package :stumpwm)
+
+(ql:quickload :nvlime)
+(nvlime:main 
+ :interface #(127 0 0 1)
+ :port 7005
+ :backend :nvlime-usocket)
+
+;(load "colors.lisp")
+(load "keymaps.lisp")
