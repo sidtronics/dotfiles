@@ -1,10 +1,19 @@
 (in-package :stumpwm)
 
+;; Setup Nvlime server
 (ql:quickload :nvlime)
 (nvlime:main 
  :interface #(127 0 0 1)
  :port 7005
  :backend :nvlime-usocket)
 
+;; Load config
+(defmacro config (path)
+  `(uiop:merge-pathnames*
+     ,(uiop:merge-pathnames* #P".config/stumpwm/" (user-homedir-pathname))
+     ,path))
+
 ;(load "colors.lisp")
-(load "keymaps.lisp")
+(load (config "keymaps.lisp"))
+
+; vim: ft=lisp
