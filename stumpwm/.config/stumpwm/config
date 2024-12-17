@@ -9,9 +9,9 @@
 
 ;; Load config
 (defmacro config (path)
-  `(uiop:merge-pathnames*
-     ,(uiop:merge-pathnames* #P".config/stumpwm/" (user-homedir-pathname))
-     ,path))
+  (uiop:merge-pathnames*
+    (uiop:merge-pathnames* #P".config/stumpwm/" (user-homedir-pathname))
+    path))
 
 ;(load "colors.lisp")
 (load (config "keymaps.lisp"))
