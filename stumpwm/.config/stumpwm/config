@@ -13,7 +13,7 @@
     (uiop:merge-pathnames* #P".config/stumpwm/" (user-homedir-pathname))
     path))
 
-;(load "colors.lisp")
+(load (config "theme.lisp"))
 (load (config "keymaps.lisp"))
 
 ; vim: ft=lisp
