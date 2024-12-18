@@ -16,5 +16,5 @@
 (load (config "theme.lisp"))
 (load (config "keymaps.lisp"))
 (load (config "modeline.lisp"))
-
+(load (config "ui.lisp"))
 ; vim: ft=lisp
