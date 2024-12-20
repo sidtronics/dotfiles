@@ -18,7 +18,7 @@ local servers = {
 
 local opts = {
 
-    capabilities = require("cmp_nvim_lsp").default_capabilities(),
+    capabilities = require('blink.cmp').get_lsp_capabilities(),
     on_attach = require("sid.lsp.keymaps").on_attach
 }
 
