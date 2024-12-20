@@ -1,17 +1,17 @@
 
-;; Font config
-(load-module "ttf-fonts")
-(set-font (make-instance 'xft:font
-           :family "FiraCode Nerd Font Propo"
-           :subfamily "Bold"
-           :size 9
-           :antialias t))
+;; Wallpaper
+(run-shell-command "feh --bg-scale ~/Pictures/Walls/green-tiger.jpg")
+
+;; Window colors
+(set-focus-color "#00FF00")
+(set-unfocus-color "#808080")
 
 ;; Message and Input colors
-
+(set-fg-color "#00FF00")
+(set-border-color "#00FF00")
 
 ;; Modeline colors
 (setf *MODE-LINE-BACKGROUND-COLOR* "#000000")
-(setf *MODE-LINE-FOREGROUND-COLOR* "#FF0000")
+(setf *MODE-LINE-FOREGROUND-COLOR* "#00FF00")
 (setf *MODE-LINE-BORDER-COLOR* "#000000")
 (setf *HIDDEN-WINDOW-COLOR* "^(:fg \"#808080\")")
