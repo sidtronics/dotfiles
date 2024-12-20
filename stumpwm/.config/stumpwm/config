@@ -4,7 +4,7 @@
 (ql:quickload :nvlime)
 (nvlime:main 
  :interface #(127 0 0 1)
- :port 7005
+ :port 7002
  :backend :nvlime-usocket)
 
 ;; Load config
