@@ -17,4 +17,8 @@
 (load (config "keymaps.lisp"))
 (load (config "ui.lisp"))
 (load (config "modeline.lisp"))
+
+;; Startup programs:
+(uiop:launch-program '("conky" "-d" "-p" "3"))
+
 ; vim: ft=lisp
