@@ -5,6 +5,8 @@
 ;; Window colors
 (set-focus-color "#00FF00")
 (set-unfocus-color "#808080")
+(set-float-focus-color "#00FF00")
+(set-float-unfocus-color "#808080")
 
 ;; Message and Input colors
 (set-fg-color "#00FF00")
