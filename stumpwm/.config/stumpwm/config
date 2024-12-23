@@ -19,6 +19,6 @@
 (load (config "modeline.lisp"))
 
 ;; Startup programs:
-(uiop:launch-program '("conky" "-d" "-p" "3"))
+(uiop:launch-program '("conky" "-d"))
 
 ; vim: ft=lisp
