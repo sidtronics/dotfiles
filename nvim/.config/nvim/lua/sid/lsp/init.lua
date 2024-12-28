@@ -9,9 +9,9 @@ local servers = {
 
 	"lua_ls",
 	"clangd",
-	"bashls",
-	"pylsp",
-    "arduino_language_server",
+--	"bashls",
+--	"pylsp",
+--  "arduino_language_server",
     "jdtls",
     "jsonls"
 }
