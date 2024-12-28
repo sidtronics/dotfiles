@@ -19,10 +19,7 @@ return {
 
             sources = {
 
-                completion = {
-
-                    enabled_providers = { 'lsp', 'path', 'snippets', 'buffer', 'nvlime' }
-                },
+                default = { 'lsp', 'path', 'snippets', 'buffer', 'nvlime' },
 
                 providers = {
 
@@ -72,5 +69,5 @@ return {
 
         },
 
-        opts_extend = { "sources.completion.enabled_providers" }
+        opts_extend = { "sources.default" }
     } }
