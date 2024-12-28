@@ -14,9 +14,9 @@
     path))
 
 (load (config "theme.lisp"))
-(load (config "keymaps.lisp"))
 (load (config "ui.lisp"))
 (load (config "modeline.lisp"))
+(load (config "keymaps.lisp"))
 
 ;; Startup programs:
 (uiop:launch-program '("conky" "-d"))
