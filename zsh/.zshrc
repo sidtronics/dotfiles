@@ -69,10 +69,14 @@ fpath=($HOME/.zsh/completions $fpath)    # additional local completions
 
 autoload -Uz compinit
 compinit
-
-zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 
+# fzf menu for tab completion
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+zstyle ':completion:*' menu no
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':fzf-tab:*' fzf-bindings 'Tab:toggle+down' 'Shift-Tab:toggle+up'
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # key bindings
 
@@ -84,6 +88,10 @@ bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 
+# fzf keybindings
+
+source <(fzf --zsh)
+
 # aliases
 
 alias ls='ls --color=auto'
@@ -91,7 +99,6 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias pacdiff='DIFFPROG="nvim -d" pacdiff'
-#alias fzf='fzf --color=auto'
 alias gdb='gdb -q'
 alias sbcl='rlwrap -c ros run'
 alias wa='firefox web.whatsapp.com'
