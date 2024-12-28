@@ -17,7 +17,7 @@ return {
         spec = {
             { [[<C-\>]],   desc = "Toggle terminal" },
             { "<leader>b", group = "Buffer"},
-            { "<leader>f", group = "Telescope" },
+            { "<leader>f", group = "Fzf" },
             { "<leader>t", group = "Toggle" },
             { "<leader>l", group = "LSP", icon = "" },
             { "<leader>m", icon = "" },

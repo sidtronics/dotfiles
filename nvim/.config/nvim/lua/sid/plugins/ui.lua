@@ -64,14 +64,14 @@ return {
                         icon = ' ',
                         desc = 'Recent Files',
                         key = 'r',
-                        action = ':Telescope oldfiles'
+                        action = ':FzfLua oldfiles'
                     },
 
                     {
                         icon = ' ',
                         desc = 'Find Files',
                         key = 'f',
-                        action = ':Telescope find_files'
+                        action = ':FzfLua files'
                     },
 
                     {
@@ -85,7 +85,7 @@ return {
                         icon = ' ',
                         desc = 'Config',
                         key = 'c',
-                        action = ':cd ~/.config/nvim/lua/sid | Telescope find_files'
+                        action = ':cd ~/.config/nvim/lua/sid | FzfLua files'
                     },
 
                     {
