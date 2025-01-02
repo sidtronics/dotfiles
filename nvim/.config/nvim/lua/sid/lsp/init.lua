@@ -9,6 +9,7 @@ local servers = {
 
 	"lua_ls",
 	"clangd",
+    "cmake",
 --	"bashls",
 --	"pylsp",
 --  "arduino_language_server",
