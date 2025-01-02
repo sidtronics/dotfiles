@@ -4,6 +4,6 @@ set ignorecase
 set singlequit
 set incsearch
 
-hi tab yellow black 
-hi current black yellow
-hi status yellow black
+hi tab 40 black
+hi current default 40
+hi status 40 black
