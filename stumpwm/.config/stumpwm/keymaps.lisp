@@ -48,3 +48,4 @@
 (define-key *root-map* (kbd "B") "banish")
 ;(define-key *root-map* (kbd "x") "kill")
 ;(define-key *root-map* (kbd "X") "remove")
+(define-key *root-map* (kbd "m") "mode-line")
