@@ -15,7 +15,7 @@
 ;; Borders
 (setf *normal-border-width* 2)
 (setf *maxsize-border-width* 2)
-(setf *mode-line-border-width* 2)
+(setf *mode-line-border-width* 0)
 (set-msg-border-width 2)
 
 ;; Window format
