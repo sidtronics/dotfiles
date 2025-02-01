@@ -4,8 +4,8 @@ return {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
         opts = {
-            disable_filetype = { "lisp" }
-        }
+            disable_filetype = { "lisp" , "markdown" }
+        },
     },
 
 
