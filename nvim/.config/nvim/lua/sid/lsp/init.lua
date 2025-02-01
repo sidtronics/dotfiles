@@ -11,7 +11,7 @@ local servers = {
 	"clangd",
     "cmake",
 --	"bashls",
---	"pylsp",
+	"pylsp",
 --  "arduino_language_server",
     "jdtls",
     "jsonls"
