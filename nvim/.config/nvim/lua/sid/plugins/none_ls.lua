@@ -1,22 +1,20 @@
 return {
 
-	"nvimtools/none-ls.nvim",
-	lazy = true,
-    ft = {"lua", "python"},
+    "nvimtools/none-ls.nvim",
+    lazy = true,
+    ft = { "lua", "python" },
 
-	config = function()
-		local null_ls = require("null-ls")
-		null_ls.setup({
+    config = function()
+        local null_ls = require("null-ls")
+        null_ls.setup({
 
-			sources = {
+            sources = {
 
-				null_ls.builtins.formatting.black,
-				null_ls.builtins.formatting.stylua.with({
-                    extra_args = {"--config-path", "$XDG_CONFIG_HOME/stylua.toml"}
-                }),
-			},
-		})
+                null_ls.builtins.formatting.black,
+                null_ls.builtins.formatting.stylua,
+            },
+        })
 
         vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format" })
-	end,
+    end,
 }
