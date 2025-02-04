@@ -10,6 +10,9 @@ light-locker &
 # Start xbindkeys
 # xbindkeys
 
+# Use Caps-Lock as ESC
+setxkbmap -option caps:escape
+
 # Disable ghost inputs
 xinput disable "SYNA3082:00 06CB:8265 Mouse"
 
