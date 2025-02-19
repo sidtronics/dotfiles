@@ -100,7 +100,7 @@ alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias pacdiff='DIFFPROG="nvim -d" pacdiff'
 alias gdb='gdb -q'
-alias sbcl='rlwrap -c ros run'
+alias sbcl='rlwrap -c sbcl'
 alias wa='firefox web.whatsapp.com'
 
 

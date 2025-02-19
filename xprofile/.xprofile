@@ -1,5 +1,5 @@
 # Exports
-export SBCL_HOME=$HOME/.roswell/impls/x86-64/linux/sbcl-bin/2.4.6/lib/sbcl/
+export SBCL_HOME=/usr/lib/sbcl/
 
 # Start light-locker 
 light-locker &
