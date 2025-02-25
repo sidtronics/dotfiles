@@ -17,7 +17,7 @@ function git_branch_rprompt() {
 
 	if [ ! -z "$gbranch" ]; then
 		local gmark=""
-	if [ ! -z "$(git status --short)" ]; then
+        if [ ! -z "$(git status --short)" ]; then
 			gmark="!"
 		fi 
 		RPROMPT="%B%F{red}$gmark%f%F{green} $gbranch%f%b"
