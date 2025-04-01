@@ -40,7 +40,7 @@
 
 ;; Applications
 (define-key *root-map* (kbd "t") "exec alacritty")
-(define-key *root-map* (kbd "b") "exec firefox")
+(define-key *root-map* (kbd "b") "exec zen-browser")
 
 ;; Misc:
 (define-key *root-map* (kbd "e") "exec")
