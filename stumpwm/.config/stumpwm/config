@@ -18,6 +18,7 @@
 (load (config "modeline.lisp"))
 (load (config "keymaps.lisp"))
 (load (config "groups.lisp"))
+(load (config "windows.lisp"))
 
 ;; Startup programs:
 (uiop:launch-program '("conky" "-d"))
