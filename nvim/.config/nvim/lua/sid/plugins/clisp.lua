@@ -21,7 +21,7 @@ return {
             cmp = { enabled = true },
             main_window = {
                 position = "right",
-                size = 54,
+                size = 53,
             },
             floating_window = {
                 border = "rounded",
