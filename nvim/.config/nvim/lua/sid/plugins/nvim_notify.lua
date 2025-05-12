@@ -4,7 +4,7 @@ return {
 
     opts = {
         background_colour = "NotifyBackground",
-        fps = 30,
+        fps = 60,
         icons = {
             DEBUG = "",
             ERROR = "",
@@ -20,11 +20,11 @@ return {
             notification = "%T",
             notification_history = "%FT%T",
         },
-        timeout = 5000,
+        timeout = 3000,
         top_down = true,
     },
 
-    init = function ()
+    init = function()
         vim.notify = require("notify")
-    end
+    end,
 }
