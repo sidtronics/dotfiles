@@ -14,7 +14,8 @@ local servers = {
 	"pylsp",
 --  "arduino_language_server",
     "jdtls",
-    "jsonls"
+    "jsonls",
+    "intelephense"
 }
 
 local opts = {
