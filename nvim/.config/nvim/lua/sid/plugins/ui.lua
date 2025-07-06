@@ -15,14 +15,7 @@ return {
             sections = {
 
                 lualine_b = { "branch", "diff", { "diagnostics", update_in_insert = true } },
-                lualine_c = {
-                    {
-                        "buffers",
-                        symbols = {
-                            alternate_file = "",
-                        },
-                    },
-                },
+                lualine_c = { "filename" },
             },
         },
 
