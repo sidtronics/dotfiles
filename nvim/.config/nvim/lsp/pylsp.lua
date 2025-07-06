@@ -9,4 +9,13 @@ return {
         "Pipfile",
         ".git",
     },
+    settings = {
+        pylsp = {
+            plugins = {
+                black = { enabled = true },
+                autopep8 = { enabled = false },
+                yapf = { enabled = false },
+            }
+        }
+    }
 }
