@@ -3,6 +3,7 @@ return {
     "nvimtools/none-ls.nvim",
     lazy = true,
     ft = { "lua", "python" },
+    enabled = false,
 
     config = function()
         local null_ls = require("null-ls")
