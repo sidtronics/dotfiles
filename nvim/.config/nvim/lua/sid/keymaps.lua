@@ -24,9 +24,6 @@ map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Shift up" })
 -- buffers
 map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
-map("n", "<leader>bx", "<cmd>bd<cr>", {desc = "Delete buffer"})
-map("n", "<leader>bX", "<cmd>bd!<cr>", {desc = "Force delete buffer"})
-
 
 -- better indenting
 map("v", "<", "<gv", { desc = "Decrease indent" })
@@ -47,6 +44,3 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- lazy
 map("n", "<leader>z", "<cmd>Lazy<cr>", { desc = "Lazy" })
-
--- mason
-map("n", "<leader>p", "<cmd>Mason<cr>", { desc = "Mason" })

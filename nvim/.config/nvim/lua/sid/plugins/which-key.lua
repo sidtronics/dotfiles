@@ -15,14 +15,12 @@ return {
     opts = {
 
         spec = {
-            { [[<C-\>]],   desc = "Toggle terminal" },
-            { "<leader>b", group = "Buffer"},
+            { [[<C-\>]], desc = "Toggle terminal" },
             { "<leader>f", group = "Fzf" },
             { "<leader>t", group = "Toggle" },
             { "<leader>l", group = "LSP", icon = "" },
             { "<leader>m", icon = "" },
-            { "<leader>p", icon = ""},
-            { "<leader>z", icon = "󰒲"},
+            { "<leader>z", icon = "󰒲" },
         },
 
         win = {
