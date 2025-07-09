@@ -17,16 +17,6 @@ return {
         start_in_insert = true,
         persist_mode = false,
         shade_terminals = false,
-        highlights = {
-            NormalFloat = {
-                guibg = "#16161e"
-            },
-            FloatBorder = {
-                guifg = "#27a1b9",
-                guibg = "#16161e"
-            }
-        },
-
         float_opts = {
             border = "rounded",
         },
