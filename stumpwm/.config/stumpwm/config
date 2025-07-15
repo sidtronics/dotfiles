@@ -1,5 +1,7 @@
 (in-package :stumpwm)
 
+(defvar *config-start-time* (get-internal-real-time))
+
 ;; Setup Nvlime server
 (ql:quickload :nvlime)
 (nvlime:main 
@@ -22,5 +24,12 @@
 
 ;; Startup programs:
 (uiop:launch-program '("conky" "-d"))
+
+(let ((config-finish-time (get-internal-real-time)))
+  (setf *startup-message* (format nil "Startup Time: ~0,5F seconds"
+                                  (float (/
+                                           (- config-finish-time *config-start-time*)
+                                           internal-time-units-per-second))))
+)
 
 ; vim: ft=lisp
