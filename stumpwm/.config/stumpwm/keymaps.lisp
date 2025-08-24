@@ -29,7 +29,7 @@
 ;;; Root-level keymaps:
 
 ;; Window:
-(define-key *root-map* (kbd "RET") "pull-hidden-next")
+(define-key *root-map* (kbd "SPC") "pull-hidden-next")
 
 ;; Group:
 (define-key *root-map* (kbd "1") "gselect 1")
@@ -40,7 +40,7 @@
 
 ;; Applications
 (define-key *root-map* (kbd "t") "exec alacritty")
-(define-key *root-map* (kbd "b") "exec zen-browser")
+(define-key *root-map* (kbd "b") "exec firefox")
 
 ;; Misc:
 (define-key *root-map* (kbd "e") "exec")
