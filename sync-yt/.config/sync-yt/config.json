@@ -1,0 +1,12 @@
+{
+    "sync_dir": "~/Music",
+    "cookies_from_browser": "firefox",
+    "playlists": [
+        {
+            "name": "Warm",
+            "url": "https://www.youtube.com/playlist?list=PLBDkPdCXB12c44ojBNHh_jKHW2fIq1LO-",
+            "convert_to_audio": true
+
+        }
+    ]
+}
