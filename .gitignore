@@ -1,3 +1,6 @@
+# StumpWM
 stumpwm/.config/stumpwm/*.log
 stumpwm/.config/stumpwm/*.log.1
 
+# PSD
+psd/.config/psd/.psd.conf
