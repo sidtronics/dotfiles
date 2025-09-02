@@ -18,10 +18,10 @@
   "run-shell-command wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ --limit 1.0")
 
 (define-key *top-map* (kbd "XF86AudioMute")
-  "run-shell-command pactl set-sink-mute @DEFAULT_SINK@ toggle")
+  "run-shell-command wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")
 
 (define-key *top-map* (kbd "XF86AudioMicMute")
-  "run-shell-command pactl set-source-mute @DEFAULT_SOURCE@ toggle")
+  "run-shell-command wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle")
 
 (define-key *top-map* (kbd "F2")
   "run-shell-command mpc toggle")
