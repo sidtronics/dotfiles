@@ -6,10 +6,10 @@
 
 ;;; Top-level keymaps:
 (define-key *top-map* (kbd "XF86MonBrightnessDown")
-  "run-shell-command light -U 2")
+  "run-shell-command light -U 5")
 
 (define-key *top-map* (kbd "XF86MonBrightnessUp")
-  "run-shell-command light -A 2")
+  "run-shell-command light -A 5")
 
 (define-key *top-map* (kbd "XF86AudioLowerVolume")
   "run-shell-command wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- --limit 1.0")
