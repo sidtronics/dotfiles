@@ -1,12 +1,13 @@
 # exports
 
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"    # ssh-agent
+export PATH="$PATH:/home/sid/.local/bin"                    # pipx
 
 # options
 
-setopt extended_glob # enable extended globbing
-setopt promptsubst # enable command, parameter substitution in prompt.
-VIRTUAL_ENV_DISABLE_PROMPT=1
+setopt extended_glob            # enable extended globbing
+setopt promptsubst              # enable substitution in prompt.
+VIRTUAL_ENV_DISABLE_PROMPT=1    # disable default venv indicator.
 
 # prompt configuration
 
@@ -72,6 +73,7 @@ compinit
 zstyle ':completion::complete:*' gain-privileges 1
 
 # fzf menu for tab completion
+
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 zstyle ':completion:*' menu no
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -102,7 +104,6 @@ alias pacdiff='DIFFPROG="nvim -d" pacdiff'
 alias gdb='gdb -q'
 alias sbcl='rlwrap -c sbcl'
 alias wa='firefox web.whatsapp.com'
-
 
 # syntax highlighting
 
